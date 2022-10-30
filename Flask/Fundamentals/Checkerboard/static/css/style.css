@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+h1{
+    margin-top: 5%;
+    text-align: center;
+}
+html{
+    height: 100%;
+}
+body{
+    background-color: peachpuff;
+    height: 100%;
+    width: 100%
+}
+main{
+    margin: 5% auto;
+    height: 50%;
+    width: 25%;
+    vertical-align: auto;
+}
+#row1, #row2, #row3, #row4, #row5, #row6, #row7, #row8{
+    height: 12.5%;
+    display: flex;
+}
+.red{
+    height: 100%;
+    width: 12.5%;
+    background-color: red;
+}
+.black{
+    height: 100%;
+    width: 12.5%;
+    background-color: black;
+}
