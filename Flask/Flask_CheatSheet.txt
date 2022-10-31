@@ -16,3 +16,7 @@
 	<script type="text/css" src="{{url_for('static', filename='js/file_name.js')}}"></script>
 
 	<img src = {{url_for('static', filename='img.png')}}>
+
+#commenting in jinja:
+
+{# comment #}
