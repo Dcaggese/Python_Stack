@@ -1,0 +1,24 @@
+SELECT name FROM names;
+
+INSERT INTO names(name)
+VALUE("Dominic");
+INSERT INTO names(name)
+VALUE("John");
+INSERT INTO names(name)
+VALUE("Jane");
+
+SELECT * FROM names;
+
+SET SQL_SAFE_UPDATES = 0;
+
+UPDATE names
+SET created_at = NOW();
+
+INSERT INTO names(name)
+VALUE
+("Bill"),
+("Joe");
+
+DELETE FROM names WHERE name = "Bill";
+
+SELECT * FROM names;
