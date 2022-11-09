@@ -34,12 +34,13 @@ class Dojo:
     def get_dojo_with_ninjas(cls,data):
         query = "SELECT * FROM dojos LEFT JOIN ninjas ON ninjas.dojo_id = dojos.id WHERE dojos.id = %(id)s;"
         results = connectToMySQL('dojo_and_ninjas_schema').query_db(query,data)
-
+        print(results)
         ninjas = []
         for dict in results:
             ninja = cls(dict)
 
             ninja_data = {
+
                 'id' : dict['ninjas.id'],
                 'first_name' : dict['first_name'],
                 'last_name' : dict['last_name'],
@@ -52,6 +53,5 @@ class Dojo:
             creator = Ninja(ninja_data)
             ninja.creator = creator
             ninjas.append(ninja)
-        print(ninjas[0])
         return ninjas
 

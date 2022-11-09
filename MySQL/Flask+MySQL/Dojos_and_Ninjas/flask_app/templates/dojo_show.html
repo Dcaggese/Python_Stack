@@ -7,7 +7,7 @@
     <title>Dojo Show</title>
 </head>
 <body>
-    <h1>{{name}} Ninjas</h1>
+    <h1>{{dojo[0]['name']}} Ninjas</h1>
     <table>
         <thead>
             <tr>
@@ -19,9 +19,9 @@
         <tbody>
             {% for ninja in dojo %}
                 <tr>
-                    <td>{{first_name}}</td>
-                    <td>{{last_name}}</td>
-                    <td>{{age}}</td>
+                    <td>{{ninja.creator.first_name}}</td>
+                    <td>{{ninja.creator.last_name}}</td>
+                    <td>{{ninja.creator.age}}</td>
                 </tr>
             {% endfor %}
             <tr></tr>
