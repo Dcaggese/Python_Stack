@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Submitted Info:</h1>
+    {% if 'name' in session: %}
+        <h3>Name: {{session['name']}}</h3>
+    {% endif %}
+    {% if 'location' in session: %}
+        <h3>Location: {{session['location']}}</h3>
+    {% endif %}
+    {% if 'language' in session: %}
+        <h3>Favorite Language: {{session['language']}}</h3>
+    {% endif %}
+    {% if 'comment' in session: %}
+        <h3>Comment: {{session['comment']}}</h3>
+    {% endif %}
+</body>
+</html>

@@ -8,6 +8,12 @@
 </head>
 <body>
     <h1>Counter:</h1>
-    <h2>{#{{ session['counter'] }}#} time(s)</h2>
+    <h2>{{ session['counter'] }} time(s)</h2>
+    <form action="/add_to_counter">
+        <input type="submit" value="+2 Visits">
+    </form>
+    <form action="/destroy_session">
+        <input type="submit" value="Reset">
+    </form>
 </body>
 </html>
