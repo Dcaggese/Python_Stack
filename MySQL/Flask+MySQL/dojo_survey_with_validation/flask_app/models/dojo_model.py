@@ -1,4 +1,5 @@
 from flask_app.config.mysqlconnection import connectToMySQL
+from flask import flash
 
 class Dojo:
     def __init__(self,data):
@@ -12,7 +13,17 @@ class Dojo:
 
     @staticmethod
     def validate_dojo(dojo):
-        pass
+        is_valid = True
+        if len(dojo['name']) <= 3:
+            flash("Name must be at least 3 characters")
+            is_valid = False
+        if len(dojo['location']) <= 3:
+            flash("Location must be at least 3 characters")
+            is_valid = False
+        if dojo['language'] != 'Python':
+            flash("Select your favorite language")
+            is_valid = False
+        return is_valid
 
     @classmethod
     def add_dojos(cls,data):

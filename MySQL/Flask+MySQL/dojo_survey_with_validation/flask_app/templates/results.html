@@ -8,17 +8,17 @@
 </head>
 <body>
     <h1>Submitted Info:</h1>
-    {% if 'name' in session: %}
-        <h3>Name: {{session['name']}}</h3>
+    {% if 'name' in dojo: %}
+        <h3>Name: {{dojo['name']}}</h3>
     {% endif %}
-    {% if 'location' in session: %}
-        <h3>Location: {{session['location']}}</h3>
+    {% if 'location' in dojo: %}
+        <h3>Location: {{dojo['location']}}</h3>
     {% endif %}
-    {% if 'language' in session: %}
-        <h3>Favorite Language: {{session['language']}}</h3>
+    {% if 'language' in dojo: %}
+        <h3>Favorite Language: {{dojo['language']}}</h3>
     {% endif %}
-    {% if 'comment' in session: %}
-        <h3>Comment: {{session['comment']}}</h3>
+    {% if 'comment' in dojo: %}
+        <h3>Comment: {{dojo['comment']}}</h3>
     {% endif %}
 </body>
 </html>

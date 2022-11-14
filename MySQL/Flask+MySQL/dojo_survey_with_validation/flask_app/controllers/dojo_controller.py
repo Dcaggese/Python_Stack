@@ -8,7 +8,14 @@ def home():
 
 @app.route('/process', methods=['POST'])
 def process():
-    data = {}
+    if not Dojo.validate_dojo(request.form):
+        return redirect('/')
+    data = {
+        'name': request.form['name'],
+        'location': request.form['location'],
+        'language': request.form['language'],
+        'comment': request.form['language']
+        }
 
     Dojo.add_dojos(data)
     return redirect('/results')
